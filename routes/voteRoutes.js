@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Vote = require("../models/Vote");
+const Vote = require("../models/vote");
 
 // Cast Vote
 router.post("/", async (req, res) => {
