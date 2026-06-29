@@ -2,9 +2,9 @@
 require("dotenv").config();
 const candidateRoutes = require("./routes/candidateRoutes");
 const voteRoutes = require("./routes/voteRoutes");
-const Category = require("./models/Category");
-const Candidate = require("./models/Candidate");
-const Vote = require("./models/Vote");
+const Category = require("./models/category");
+const Candidate = require("./models/candidate");
+const Vote = require("./models/vote");
 
 // Import packages
 const express = require("express");
