@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Candidate = require("../models/Candidate");
+const Candidate = require("../models/candidate");
 
 // =======================
 // Get Candidates by Category
