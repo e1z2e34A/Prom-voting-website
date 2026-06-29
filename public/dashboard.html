@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>2K26 PDSSA Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <div class="sidebar">
+
+        <div class="logo-area">
+
+            <img src="images/logo.png">
+
+            <h2>2K26 PDSSA</h2>
+
+            <p>Voting Dashboard</p>
+
+        </div>
+
+        <ul>
+
+            <li id="dashboardBtn" class="active">🏠 Dashboard</li>
+
+            <li id="categoriesBtn">📂 Categories</li>
+
+            <li id="candidatesBtn">👥 Candidates</li>
+
+            <li id="resultsBtn">📊 Results</li>
+
+            <li id="settingsBtn">⚙ Settings</li>
+
+        </ul>
+
+    </div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <div class="main-content">
+
+        <header>
+
+            <h1>Admin Dashboard</h1>
+
+            <p>Manage your entire election from one place.</p>
+
+        </header>
+
+        <!-- ========================================== -->
+        <!-- DASHBOARD SECTION -->
+        <!-- ========================================== -->
+
+        <div id="dashboardSection">
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>Total Categories</h3>
+
+                    <h1 id="totalCategories">0</h1>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Total Candidates</h3>
+
+                    <h1 id="totalCandidates">0</h1>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Total Votes</h3>
+
+                    <h1 id="totalVotes">0</h1>
+
+                </div>
+
+            </div>
+
+            <div class="chart-box">
+
+                <canvas id="voteChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- CATEGORY SECTION -->
+        <!-- ========================================== -->
+
+        <div id="categorySection" style="display:none;">
+
+            <div class="form-card">
+
+                <h2>Add Category</h2>
+
+                <input type="text" id="newCategory" placeholder="Category Name">
+
+                <button onclick="addCategory()">
+
+                    Save Category
+
+                </button>
+
+            </div>
+
+            <div class="table-box">
+
+                <h2>Categories</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Category</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="categoryTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- CANDIDATE SECTION -->
+        <!-- ========================================== -->
+
+        <div id="candidateSection" style="display:none;">
+
+            <div class="form-card">
+
+                <h2>Add Candidate</h2>
+
+                <input type="text" id="candidateName" placeholder="Candidate Name">
+
+                <input type="text" id="candidateClass" placeholder="Class">
+
+                <select id="candidateCategory">
+
+                </select>
+
+                <button onclick="addCandidate()">
+
+                    Save Candidate
+
+                </button>
+
+            </div>
+
+            <div class="table-box">
+
+                <h2>Candidate Management</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+
+                            <th>Class</th>
+
+                            <th>Category</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="candidateTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- RESULTS SECTION -->
+        <!-- ========================================== -->
+
+        <div id="resultsSection" style="display:none;">
+
+            <div class="table-box">
+
+                <h2>Election Results</h2>
+
+                <table>
+
+                    <!-- <thead>
+
+                        <tr>
+
+                            <th>Category</th>
+
+                            <th>Candidate</th>
+
+                            <th>Votes</th>
+
+                        </tr>
+
+                    </thead> -->
+
+                    <div id="resultsContainer">
+
+                    </div>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- SETTINGS SECTION -->
+        <!-- ========================================== -->
+
+        <div id="settingsSection" style="display:none;">
+
+            <div class="table-box">
+
+                <h2>Settings</h2>
+
+
+                <button id="logoutBtn">
+
+                    🚪 Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

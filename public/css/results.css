@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background: #090909;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+  color: gold;
+}
+
+.category {
+  margin-top: 40px;
+  background: #171717;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.category h2 {
+  color: gold;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+}
+
+.result:last-child {
+  border-bottom: none;
+}
