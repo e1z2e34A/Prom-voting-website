@@ -427,7 +427,7 @@ async function loadResults() {
 
                     </div>
 
-                    <div>
+                    <div class="rest_vote">
 
                         ${result.votes} Vote${result.votes > 1 ? "s" : ""}
 
